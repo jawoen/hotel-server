@@ -50,8 +50,8 @@ app.get("/members", (req, res)=>{
 //서버 주소:id 값으로 요청
 app.get("/members/:id", (req, res)=>{
     const {id} = req.params;
-    conn.query(`select * from member where m_no = ${id}`, function(error, result, fields){
-    res.send(result);
+    conn.query(`select * from event where e_no = ${id}`, function(error, result, fields){
+        res.send(result);
     })
 })
 //서버 구동
